@@ -10,7 +10,7 @@ const Details = () => {
   const {id}=useParams()
   const getUsers=async()=>{
     const res = await axios.get("https://jsonplaceholder.typicode.com/users")
-setList(res.data.find(el=>el.id===id))
+setList(res.data.find(el=>el.id==id))
 setLoading(false)
   }
   useEffect(() => {
